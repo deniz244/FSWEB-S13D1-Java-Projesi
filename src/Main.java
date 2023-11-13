@@ -25,7 +25,7 @@ public class Main {
 
         if(hour < 0 || hour > 23){
             return false;
-        }else if(hav == true && (hour<8 || hour>20)){
+        }else if(hav == true && (hour<8 || hour>=20)){
             return true;
         }else {
             return false;
