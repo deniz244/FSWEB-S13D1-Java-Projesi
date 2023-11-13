@@ -23,9 +23,8 @@ public class Main {
 
     public static boolean shouldWakeUp(boolean hav, int hour) {
 
-        if(!hav || (hour < 0 || hour > 23)){
-            return false;
-        }else if(hav == true && (hour<8 || hour>=20)){
+        if(!hav || (hour < 0 || hour > 23)) return false;
+        else if(hav == true && (hour<8 || hour>=20)){
             return true;
         }else {
             return false;
@@ -43,9 +42,9 @@ public class Main {
     }
 
     public static boolean isCatPlaying(boolean summer, int temp){
-        if(temp >= 25 && temp <= 35){
+        if(!summer && (temp >= 25 && temp <= 35)){
             return true;
-        } else if (summer == true && (temp >= 25 && temp <= 45)) {
+        } else if (summer && (temp >= 25 && temp <= 45)) {
             return true;
         }else{
             return false;
