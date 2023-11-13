@@ -23,7 +23,7 @@ public class Main {
 
     public static boolean shouldWakeUp(boolean hav, int hour) {
 
-        if(hour < 0 || hour > 23){
+        if(!hav || (hour < 0 || hour > 23)){
             return false;
         }else if(hav == true && (hour<8 || hour>=20)){
             return true;
