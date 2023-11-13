@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("-----------HAVLAYAN KÖPEĞİMİZ----------");
@@ -14,17 +16,23 @@ public class Main {
         System.out.println(isCatPlaying(false, 36));
         System.out.println(isCatPlaying(false, 35));
         System.out.println("-----------ALAN HESAPLAMA-------------");
-        System.out.println(area(5.0, 4.0));
-        System.out.println(area(-1.0, 4.0));
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter width of rectangle: ");
+        double width = scanner.nextDouble();
+        System.out.println("Enter height of rectangle: ");
+        double height = scanner.nextDouble();
+        System.out.println("Area of rectangle: " + area(width,height));
         System.out.println("-----RADIUS----");
-        System.out.println(area(5.0));
-        System.out.println(area(-1));
+        Scanner scanner2 = new Scanner(System.in);
+        System.out.println("Enter a radius: ");
+        double radius = scanner2.nextDouble();
+        System.out.println("Area of the circle:" + area(radius));
     }
 
     public static boolean shouldWakeUp(boolean hav, int hour) {
 
         if(!hav || (hour < 0 || hour > 23)) return false;
-        else if(hav == true && (hour<8 || hour>=20)){
+        else if(hav && (hour<8 || hour>=20)){
             return true;
         }else {
             return false;
